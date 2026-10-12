@@ -1,0 +1,95 @@
+---
+import { awards, certifications, education } from '@/data/education';
+import { formatPeriod } from '@/lib/format';
+import Section from '../Section.astro';
+---
+
+<Section id="education" title="Education" eyebrow="04">
+  <ol class="education">
+    {
+      education.map((item) => (
+        <li>
+          <h3>{item.institution}</h3>
+          <p class="education__credential">{item.credential}</p>
+          <p class="education__period">
+            <time datetime={item.start}>{formatPeriod(item.start)}</time>
+            {item.end !== item.start && (
+              <>
+                {' – '}
+                {item.end === 'present' ? 'Present' : <time datetime={item.end}>{formatPeriod(item.end)}</time>}
+              </>
+            )}
+          </p>
+        </li>
+      ))
+    }
+  </ol>
+
+  <div class="extras">
+    <div>
+      <h3>Certifications</h3>
+      <ul>
+        {certifications.map((c) => <li>{c}</li>)}
+      </ul>
+    </div>
+    {
+      awards.length > 0 && (
+        <div>
+          <h3>Honors & awards</h3>
+          <ul>
+            {awards.map((a) => (
+              <li>{a}</li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+  </div>
+</Section>
+
+<style>
+  .education {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .education li {
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+  }
+
+  .education__credential {
+    margin: 0;
+  }
+
+  .education__period {
+    margin: 0.5rem 0 0;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+  }
+
+  .extras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .extras ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--muted);
+  }
+</style>
