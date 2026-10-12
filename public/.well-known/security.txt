@@ -1,0 +1,6 @@
+# Security contact for this site (RFC 9116).
+# Please report vulnerabilities privately via GitHub Security Advisories.
+Contact: https://github.com/Acid-Burn-del/Acid-Burn-del/security/advisories/new
+Expires: 2027-10-12T00:00:00.000Z
+Preferred-Languages: en
+Policy: https://github.com/Acid-Burn-del/Acid-Burn-del/blob/main/SECURITY.md

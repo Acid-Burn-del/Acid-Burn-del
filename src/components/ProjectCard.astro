@@ -1,0 +1,96 @@
+---
+import type { Project } from '@/lib/projects';
+import Icon from './Icon.astro';
+import Link from './Link.astro';
+
+interface Props {
+  project: Project;
+  headingLevel?: 'h2' | 'h3';
+}
+
+const { project, headingLevel: Heading = 'h3' } = Astro.props;
+const { title, summary, tags, repo, demo } = project.data;
+---
+
+<article class="card">
+  <Heading class="card__title">
+    <Link href={`/projects/${project.id}`}>{title}</Link>
+  </Heading>
+  <p class="card__summary">{summary}</p>
+  {
+    tags.length > 0 && (
+      <ul class="tags" aria-label="Technologies">
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+    )
+  }
+  {
+    (repo || demo) && (
+      <p class="card__links">
+        {repo && (
+          <Link href={repo}>
+            <Icon name="github" size={16} /> Source<span class="visually-hidden"> code for {title}</span>
+          </Link>
+        )}
+        {demo && (
+          <Link href={demo}>
+            <Icon name="link" size={16} /> Live<span class="visually-hidden"> demo of {title}</span>
+          </Link>
+        )}
+      </p>
+    )
+  }
+</article>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    height: 100%;
+    padding: 1.4rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    transition: border-color 0.15s ease;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+  }
+
+  .card__title {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .card__title :global(a) {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .card__title :global(a):hover {
+    color: var(--accent);
+  }
+
+  .card__summary {
+    flex: 1;
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .card__links {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .card__links :global(a) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+</style>

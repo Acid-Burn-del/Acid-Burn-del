@@ -1,0 +1,34 @@
+---
+import { skills } from '@/data/skills';
+import Section from '../Section.astro';
+---
+
+<Section id="skills" title="Skills" eyebrow="02">
+  <div class="skills">
+    {
+      skills.map((group) => (
+        <div class="skills__group">
+          <h3>{group.title}</h3>
+          <ul class="tags">
+            {group.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</Section>
+
+<style>
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.5rem;
+  }
+
+  h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+  }
+</style>

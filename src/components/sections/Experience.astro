@@ -1,0 +1,72 @@
+---
+import { experience } from '@/data/experience';
+import { formatPeriod } from '@/lib/format';
+import Link from '../Link.astro';
+import Section from '../Section.astro';
+---
+
+<Section id="experience" title="Experience" eyebrow="03">
+  <ol class="timeline">
+    {
+      experience.map((job) => (
+        <li class="timeline__item">
+          <p class="timeline__period">
+            <time datetime={job.start}>{formatPeriod(job.start)}</time> –{' '}
+            {job.end === 'present' ? 'Present' : <time datetime={job.end}>{formatPeriod(job.end)}</time>}
+          </p>
+          <div>
+            <h3>
+              {job.role} ·{' '}
+              {job.url ? <Link href={job.url}>{job.organization}</Link> : job.organization}
+            </h3>
+            <ul>
+              {job.highlights.map((h) => (
+                <li>{h}</li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</Section>
+
+<style>
+  .timeline {
+    display: grid;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .timeline__item {
+    display: grid;
+    grid-template-columns: minmax(9rem, 12rem) 1fr;
+    gap: 0.25rem 1.5rem;
+  }
+
+  @media (max-width: 40rem) {
+    .timeline__item {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .timeline__period {
+    margin: 0.15rem 0 0;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+  }
+
+  h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--muted);
+  }
+</style>

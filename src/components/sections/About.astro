@@ -1,0 +1,23 @@
+---
+import { site } from '@/config/site';
+import Section from '../Section.astro';
+---
+
+<Section id="about" title="About me" eyebrow="01">
+  <div class="about">
+    {site.about.map((paragraph) => <p>{paragraph}</p>)}
+    {site.location && <p class="about__meta">Based in {site.location}</p>}
+  </div>
+</Section>
+
+<style>
+  .about {
+    max-width: 44rem;
+  }
+
+  .about__meta {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+import Link from '@/components/Link.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page not found" noindex>
+  <div class="container page">
+    <p class="code" aria-hidden="true">404</p>
+    <h1>Page not found</h1>
+    <p>The page you are looking for doesn't exist or has moved.</p>
+    <p><Link href="/" class="button button--primary">Back to home</Link></p>
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: clamp(4rem, 12vw, 8rem);
+    text-align: center;
+  }
+
+  .code {
+    margin: 0;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: clamp(3rem, 12vw, 6rem);
+    font-weight: 700;
+  }
+</style>

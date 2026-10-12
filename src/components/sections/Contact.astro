@@ -1,0 +1,54 @@
+---
+import { site } from '@/config/site';
+import Icon from '../Icon.astro';
+import Link from '../Link.astro';
+import Section from '../Section.astro';
+
+/*
+ * Deliberately no contact <form>: a static site has no safe place to receive
+ * submissions, and third-party form backends add tracking and spam surface.
+ * Visitors reach out through links instead.
+ */
+---
+
+<Section id="contact" title="Get in touch" eyebrow="05">
+  <p class="lead">
+    Have a question, an opportunity or just want to say hi? My inbox is open.
+  </p>
+  <ul class="contact">
+    {
+      site.email && (
+        <li>
+          <Link href={`mailto:${site.email}`} class="button button--primary">
+            <Icon name="mail" size={18} /> Email me
+          </Link>
+        </li>
+      )
+    }
+    {
+      site.socials.map((s) => (
+        <li>
+          <Link href={s.href} class="button">
+            <Icon name={s.icon} size={18} /> {s.label}
+          </Link>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
+
+<style>
+  .lead {
+    max-width: 38rem;
+    color: var(--muted);
+  }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+</style>

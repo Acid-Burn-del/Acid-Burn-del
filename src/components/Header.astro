@@ -1,0 +1,73 @@
+---
+import { site } from '@/config/site';
+import Link from './Link.astro';
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <Link href="/" class="brand" aria-label={`${site.name} — home`}>
+      <span aria-hidden="true">~/</span>{site.handle}
+    </Link>
+    <nav aria-label="Primary">
+      <ul>
+        {
+          site.nav.map((item) => (
+            <li>
+              <Link href={item.href}>{item.label}</Link>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+  }
+
+  .site-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    padding-block: 0.85rem;
+  }
+
+  .brand {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .brand span {
+    color: var(--accent);
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  nav a:hover {
+    color: var(--text);
+  }
+</style>

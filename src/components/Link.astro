@@ -1,0 +1,28 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { isExternal, withBase } from '@/lib/url';
+
+/**
+ * The only component that should render <a> tags for navigation.
+ * - Internal paths get the deployment base path prepended.
+ * - External links always get rel="noopener noreferrer" (no tabnabbing,
+ *   no referrer leakage) and open in a new tab.
+ */
+type Props = Omit<HTMLAttributes<'a'>, 'href' | 'rel' | 'target'> & { href: string };
+
+const { href, ...rest } = Astro.props;
+const external = isExternal(href) || href.startsWith('mailto:');
+const resolved = external || href.startsWith('#') ? href : withBase(href);
+---
+
+{
+  external ? (
+    <a href={resolved} rel="noopener noreferrer external" target={href.startsWith('mailto:') ? undefined : '_blank'} {...rest}>
+      <slot />
+    </a>
+  ) : (
+    <a href={resolved} {...rest}>
+      <slot />
+    </a>
+  )
+}

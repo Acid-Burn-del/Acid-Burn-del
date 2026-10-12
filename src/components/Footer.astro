@@ -1,0 +1,62 @@
+---
+import { site } from '@/config/site';
+import Icon from './Icon.astro';
+import Link from './Link.astro';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>© {year} {site.name}. Built with Astro — no cookies, no trackers.</p>
+    <ul aria-label="Social links">
+      {
+        site.socials.map((s) => (
+          <li>
+            <Link href={s.href} aria-label={s.label}>
+              <Icon name={s.icon} />
+            </Link>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: 5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .site-footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.5rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    display: flex;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: var(--muted);
+  }
+
+  a:hover {
+    color: var(--text);
+  }
+</style>

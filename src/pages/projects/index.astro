@@ -1,0 +1,48 @@
+---
+import ProjectCard from '@/components/ProjectCard.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getProjects } from '@/lib/projects';
+
+const projects = await getProjects();
+---
+
+<BaseLayout title="Projects" description="Things I have designed, built and shipped.">
+  <div class="container page">
+    <h1>Projects</h1>
+    <p class="lead">Things I have designed, built and shipped.</p>
+    <ul class="grid">
+      {
+        projects.map((project) => (
+          <li>
+            <ProjectCard project={project} headingLevel="h2" />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: clamp(3rem, 8vw, 5rem);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+  }
+
+  .lead {
+    margin: 0.75rem 0 2.5rem;
+    color: var(--muted);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+</style>

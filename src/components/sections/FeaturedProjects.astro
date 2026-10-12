@@ -1,0 +1,43 @@
+---
+import { getFeaturedProjects } from '@/lib/projects';
+import Icon from '../Icon.astro';
+import Link from '../Link.astro';
+import ProjectCard from '../ProjectCard.astro';
+import Section from '../Section.astro';
+
+const projects = await getFeaturedProjects();
+---
+
+<Section id="projects" title="Featured projects" eyebrow="04">
+  <ul class="grid">
+    {
+      projects.map((project) => (
+        <li>
+          <ProjectCard project={project} />
+        </li>
+      ))
+    }
+  </ul>
+  <p class="more">
+    <Link href="/projects">All projects <Icon name="arrow" size={16} /></Link>
+  </p>
+</Section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .more :global(a) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 1.5rem;
+    font-weight: 600;
+  }
+</style>
