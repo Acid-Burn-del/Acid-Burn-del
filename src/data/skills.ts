@@ -2,8 +2,17 @@ import { z } from 'astro/zod';
 import { skillGroupSchema } from '@/lib/schemas';
 
 export const skills = z.array(skillGroupSchema).parse([
-  { title: 'Languages', items: ['TypeScript', 'JavaScript', 'Python', 'SQL', 'Bash'] },
-  { title: 'Frontend', items: ['HTML & CSS', 'Astro', 'React', 'Accessibility'] },
-  { title: 'Backend', items: ['Node.js', 'REST APIs', 'PostgreSQL'] },
-  { title: 'Tooling & Security', items: ['Git', 'GitHub Actions', 'Docker', 'Linux', 'OWASP Top 10'] },
+  { title: 'UI/UX Design', items: ['Figma', 'UI/UX design', 'Design thinking', 'Interactive content'] },
+  {
+    title: 'Graphic & Branding',
+    items: ['Photoshop', 'Illustrator', 'InDesign', 'Logo design', 'Brand identity', 'Infographics'],
+  },
+  {
+    title: 'Multimedia & E-learning',
+    items: ['Video editing', 'Subtitling', 'Social media creatives', 'LearnWorlds LMS'],
+  },
+  {
+    title: 'AI & Tech',
+    items: ['Claude Code', 'Claude Skills & Subagents', 'Generative AI content', 'Hardware & networking'],
+  },
 ]);

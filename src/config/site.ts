@@ -6,27 +6,34 @@ import { siteConfigSchema } from '@/lib/schemas';
  * a bad value (e.g. a non-https link) fails the build instead of shipping.
  */
 export const site = siteConfigSchema.parse({
-  name: 'Acid-Burn-del', // replace with your real name
+  name: 'Sandesh Bishokarma',
   handle: 'Acid-Burn-del',
-  role: 'Software Developer',
-  tagline: 'I build fast, accessible and secure software for the web.',
+  role: 'UI/UX & Graphic Designer',
+  tagline: 'Creative content developer skilled in branding and multimedia editing.',
   description:
-    'Portfolio of Acid-Burn-del — software developer focused on secure, well-architected web applications.',
-  // location: 'City, Country',
+    'Portfolio of Sandesh Bishokarma — UI/UX and graphic designer and creative content developer based in Hämeenlinna, Finland.',
+  location: 'Hämeenlinna, Finland',
   // email: 'you@example.com', // uncomment to show a mailto: contact link
   availableForWork: true,
   about: [
-    "Hi! I'm a developer who enjoys turning ideas into reliable, maintainable software. I care about clean architecture, good security hygiene and interfaces that work for everyone.",
-    'This site is intentionally simple: it is statically generated, ships no tracking and almost no JavaScript, and is locked down with a strict Content Security Policy.',
+    'My background as an educational counselor taught me how to listen, understand problems, and guide people toward the right decisions. Over time, this way of thinking naturally led me into design.',
+    'Even while working in another profession, I kept my creative side alive by learning Photoshop, Illustrator and InDesign, and later focused deeply on Figma, which helped me transition from graphic design to UI/UX design.',
+    'To me, design is not limited to digital interfaces — it is a way of thinking. It is about empathy, clarity, and solving real-world problems in a way that feels simple and meaningful for users.',
   ],
   socials: [
+    {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/sandesh-bishokarma-849b64215',
+      icon: 'linkedin',
+    },
+    { label: 'Behance', href: 'https://www.behance.net/sandeshtriston', icon: 'link' },
     { label: 'GitHub', href: 'https://github.com/Acid-Burn-del', icon: 'github' },
-    // { label: 'LinkedIn', href: 'https://www.linkedin.com/in/your-handle', icon: 'linkedin' },
   ],
   nav: [
     { label: 'About', href: '/#about' },
     { label: 'Skills', href: '/#skills' },
     { label: 'Experience', href: '/#experience' },
+    { label: 'Education', href: '/#education' },
     { label: 'Projects', href: '/projects' },
     { label: 'Contact', href: '/#contact' },
   ],
