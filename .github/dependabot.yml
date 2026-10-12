@@ -8,6 +8,13 @@ updates:
       astro:
         patterns: ['astro', '@astrojs/*']
     open-pull-requests-limit: 5
+    ignore:
+      # @astrojs/check only supports TypeScript 5–6 for now.
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
+      # Types must match the Node major in .nvmrc.
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
 
   - package-ecosystem: github-actions
     directory: /
