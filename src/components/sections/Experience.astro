@@ -19,6 +19,7 @@ import Section from '../Section.astro';
               {job.role} ·{' '}
               {job.url ? <Link href={job.url}>{job.organization}</Link> : job.organization}
             </h3>
+            {job.location && <p class="timeline__location">{job.location}</p>}
             <ul>
               {job.highlights.map((h) => (
                 <li>{h}</li>
@@ -57,6 +58,12 @@ import Section from '../Section.astro';
     color: var(--muted);
     font-family: var(--font-mono);
     font-size: 0.875rem;
+  }
+
+  .timeline__location {
+    margin: -0.35rem 0 0.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
   }
 
   h3 {
