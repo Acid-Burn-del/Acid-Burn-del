@@ -12,6 +12,10 @@ export const skills = z.array(skillGroupSchema).parse([
     items: ['Video editing', 'Subtitling', 'Social media creatives', 'LearnWorlds LMS'],
   },
   {
+    title: 'Web & Data',
+    items: ['HTML & CSS', 'Tailwind CSS', 'PHP', 'MySQL', 'Python & pandas', 'Git & GitHub'],
+  },
+  {
     title: 'AI & Tech',
     items: ['Claude Code', 'Claude Skills & Subagents', 'Generative AI content', 'Hardware & networking'],
   },

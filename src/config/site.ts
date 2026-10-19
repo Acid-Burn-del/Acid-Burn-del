@@ -27,7 +27,8 @@ export const site = siteConfigSchema.parse({
       icon: 'linkedin',
     },
     { label: 'Behance', href: 'https://www.behance.net/sandeshtriston', icon: 'link' },
-    { label: 'GitHub', href: 'https://github.com/Acid-Burn-del', icon: 'github' },
+    { label: 'GitHub · Acidburn07', href: 'https://github.com/Acidburn07', icon: 'github' },
+    { label: 'GitHub · Acid-Burn-del', href: 'https://github.com/Acid-Burn-del', icon: 'github' },
   ],
   nav: [
     { label: 'About', href: '/#about' },
