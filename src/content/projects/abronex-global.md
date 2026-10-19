@@ -4,6 +4,7 @@ summary: A study-abroad consultancy platform, from Figma UI/UX concept to a modu
 date: 2026-02-20
 tags: [UI/UX, Figma, PHP, MySQL, Tailwind CSS]
 repo: https://github.com/Acidburn07/AbronexGlobal-PHP
+demo: https://abronexglobal.netlify.app/
 featured: true
 ---
 
@@ -16,10 +17,15 @@ consultant and our team's own experience of becoming international students.
 
 ## UI/UX concept
 
-The first phase was a concept redesign of the study-abroad decision experience.
-I designed the screens in Figma and built a responsive HTML and Tailwind CSS
-landing page from them
-([concept repo](https://github.com/Acidburn07/Group-11-AbronexGlobal)).
+The first phase (Team 11, January 2026) was a concept for a smart study-abroad
+decision platform. The case study covers the problem statement, two user
+personas, a competitor review, the logo concept, typography (Neue Montreal and
+Inter) and the colour palette, all built in Figma.
+
+My parts: the project idea, research, prototyping, and coding the responsive
+HTML and Tailwind CSS website
+([concept repo](https://github.com/Acidburn07/Group-11-AbronexGlobal),
+[live site](https://abronexglobal.netlify.app/)).
 
 ## Building the platform
 
