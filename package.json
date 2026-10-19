@@ -18,7 +18,7 @@
     "validate": "npm run check && npm run test && npm run build"
   },
   "dependencies": {
-    "astro": "7.3.8"
+    "astro": "7.4.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
