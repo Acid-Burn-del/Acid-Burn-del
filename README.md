@@ -22,10 +22,10 @@ I start with design thinking, design the system in Figma, then build it in code.
 
 #### Toolbox
 
-**Design** · Figma, Photoshop, Illustrator, DaVinci Resolve
-**Code** · HTML, CSS, JavaScript, TypeScript, React, PHP, MySQL, Python, Java, C/C++, Godot
-**Ways of working** · Design Thinking, Double Diamond, Scrum, user testing
-**AI and automation** · ChatGPT, Claude, Zapier, Make, n8n, Notion
+- **Design** · Figma, Photoshop, Illustrator, DaVinci Resolve
+- **Code** · HTML, CSS, JavaScript, TypeScript, React, PHP, MySQL, Python, Java, C/C++, Godot
+- **Ways of working** · Design Thinking, Double Diamond, Scrum, user testing
+- **AI and automation** · ChatGPT, Claude, Zapier, Make, n8n, Notion
 
 [![Skills](https://skillicons.dev/icons?i=figma,ps,ai,html,css,js,ts,react,php,mysql,python,java,godot&theme=dark&perline=13)](https://acid-burn-del.github.io/sandesh-portfolio/)
 
