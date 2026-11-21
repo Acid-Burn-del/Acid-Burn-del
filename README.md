@@ -1,87 +1,34 @@
-<h1>Hei, I’m Sandesh. A UI/UX designer who can code.</h1>
+### Hei, I’m Sandesh 👋
 
-<p>
-Tech enthusiast and visual designer in Hämeenlinna, Finland · Computer Applications student at HAMK<br>
-I use design thinking to find the real problem, design the interface in Figma, and build it myself.<br>
-I understand how markets work, I run brainstorms that end in decisions, and I use AI and automation to take the busywork off a team.
-</p>
+**UI/UX and visual designer who can code.** I study Computer Applications at HAMK in Hämeenlinna, Finland, and I’m open to design, UI/UX and junior frontend roles.
 
-<p>
-  <a href="https://acid-burn-del.github.io/sandesh-portfolio/"><img src="https://img.shields.io/badge/Portfolio-0A0A0A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
-  <a href="https://www.linkedin.com/in/sandesh-bishokarma-849b64215"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://www.behance.net/sandeshtriston"><img src="https://img.shields.io/badge/Behance-1769FF?style=for-the-badge&logo=behance&logoColor=white" alt="Behance"></a>
-  <a href="mailto:sandeshbishokarma117@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-</p>
+I start with design thinking, design the system in Figma, then build it in code. I’ve worked on marketing teams, so I design for how people actually buy, and I use AI and automation to cut the busywork.
 
-<hr>
+**Start here → [My portfolio](https://acid-burn-del.github.io/sandesh-portfolio/)**
 
-<h3>Design and video</h3>
-<p>
-  <img src="https://skillicons.dev/icons?i=figma,ps,ai&theme=dark" alt="Figma, Photoshop, Illustrator">
-  <img src="https://img.shields.io/badge/DaVinci%20Resolve-0A0A0A?style=for-the-badge&logo=davinciresolve&logoColor=white" alt="DaVinci Resolve" height="48">
-</p>
+#### Best work
 
-<h3>Frontend</h3>
-<p>
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,astro&theme=dark" alt="HTML, CSS, JavaScript, TypeScript, React, Astro">
-</p>
+| Project | What it shows |
+|---|---|
+| [**Portfolio site**](https://acid-burn-del.github.io/sandesh-portfolio/) · [code](https://github.com/Acid-Burn-del/sandesh-portfolio) | Designed in Figma and coded by hand. Live work feed, role filters, animated intro, works on phones and with reduced motion |
+| [**Memoera Puistogolf**](https://github.com/Acid-Burn-del/memoera-puistogolf) | Golf game for people with memory disorders, played by moving a real block. Godot, user testing, Scrum Master for Sprint 2 at HAMK Design Factory |
+| [**Omendon LinkedIn system**](https://acid-burn-del.github.io/sandesh-portfolio/#omendon) | 100+ carousel and post pages for a UAE market entry company, built from one reusable template set |
 
-<h3>Backend and databases</h3>
-<p>
-  <img src="https://skillicons.dev/icons?i=php,mysql&theme=dark" alt="PHP, MySQL">
-</p>
+#### Now
 
-<h3>Languages from college projects</h3>
-<p>
-  <img src="https://skillicons.dev/icons?i=c,cpp,java,python,godot&theme=dark" alt="C, C++, Java, Python, Godot (GDScript)">
-</p>
+- Studying Computer Applications at HAMK (2025 to 2028)
+- Leading UX/UI in a HAMK Design Factory team for client Memoera
+- Looking for a trainee or junior role in Finland
 
-<h3>AI and automation</h3>
-<p>
-  <img src="https://img.shields.io/badge/ChatGPT-0A0A0A?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT">
-  <img src="https://img.shields.io/badge/Claude-0A0A0A?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude">
-  <img src="https://img.shields.io/badge/Zapier-0A0A0A?style=for-the-badge&logo=zapier&logoColor=white" alt="Zapier">
-  <img src="https://img.shields.io/badge/Make-0A0A0A?style=for-the-badge&logo=make&logoColor=white" alt="Make">
-  <img src="https://img.shields.io/badge/n8n-0A0A0A?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n">
-  <img src="https://img.shields.io/badge/Notion-0A0A0A?style=for-the-badge&logo=notion&logoColor=white" alt="Notion">
-  <img src="https://img.shields.io/badge/Canva-0A0A0A?style=for-the-badge&logo=canva&logoColor=white" alt="Canva">
-</p>
+#### Toolbox
 
-<h3>How I work</h3>
-<p>
-  <img src="https://img.shields.io/badge/Design%20Thinking-RUN--EU-0A0A0A?style=for-the-badge&logo=miro&logoColor=white" alt="Design Thinking, RUN-EU">
-  <img src="https://img.shields.io/badge/Double%20Diamond-0A0A0A?style=for-the-badge&logo=diamond&logoColor=white" alt="Double Diamond">
-  <img src="https://img.shields.io/badge/Scrum-Scrum%20Master-0A0A0A?style=for-the-badge&logo=scrumalliance&logoColor=white" alt="Scrum">
-  <img src="https://img.shields.io/badge/Marketing-Branding-0A0A0A?style=for-the-badge&logo=googleanalytics&logoColor=white" alt="Marketing and branding">
-</p>
+**Design** · Figma, Photoshop, Illustrator, DaVinci Resolve
+**Code** · HTML, CSS, JavaScript, TypeScript, React, PHP, MySQL, Python, Java, C/C++, Godot
+**Ways of working** · Design Thinking, Double Diamond, Scrum, user testing
+**AI and automation** · ChatGPT, Claude, Zapier, Make, n8n, Notion
 
-- **Empathise and define** · talk to users first, then write the problem in one sentence
-- **Brainstorm and decide** · diverge wide, vote, test the winner on paper before code
-- **Design and build** · Figma system first, then the code that ships it
-- **Automate the busywork** · AI and workflows so the team spends time on ideas
+[![Skills](https://skillicons.dev/icons?i=figma,ps,ai,html,css,js,ts,react,php,mysql,python,java,godot&theme=dark&perline=13)](https://acid-burn-del.github.io/sandesh-portfolio/)
 
-<h3>Certificates</h3>
-<p>
-  <img src="https://img.shields.io/badge/Google%20UX%20Design-Certificate-0A0A0A?style=for-the-badge&logo=google&logoColor=white" alt="Google UX Design Certificate">
-  <img src="https://img.shields.io/badge/Adobe-Image%20Editing-0A0A0A?style=for-the-badge&logo=adobe&logoColor=white" alt="Adobe Image Editing">
-  <img src="https://img.shields.io/badge/RUN--EU-Design%20Thinking-0A0A0A?style=for-the-badge&logo=bookstack&logoColor=white" alt="RUN-EU Design Thinking">
-</p>
+#### Contact
 
-<h3>Selected work</h3>
-
-- **Omendon** · LinkedIn carousel system for a UAE market entry company, 100+ pages
-- **Memoera Puistogolf** · golf game played by moving a real block, built in Godot, HAMK Design Factory, Scrum Master Sprint 2
-- **Finnish Dream flyer** · A4 campaign print for SDP Helsinki
-- **Brands and feeds in Nepal** · identities, social series and print, 2023 to 2025
-- **This portfolio** · designed in Figma, hand coded, hosted on GitHub Pages
-
-⚡ Design it, build it, automate the boring part.
-
-<hr>
-
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=Acid-Burn-del&show_icons=true&hide_border=true&theme=github_dark" alt="GitHub stats" height="165">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Acid-Burn-del&layout=compact&hide_border=true&theme=github_dark" alt="Most used languages" height="165">
-</p>
-
-<p><img src="https://komarev.com/ghpvc/?username=Acid-Burn-del&color=0A0A0A&style=flat" alt="Profile views"></p>
+[Portfolio](https://acid-burn-del.github.io/sandesh-portfolio/) · [LinkedIn](https://www.linkedin.com/in/sandesh-bishokarma-849b64215) · [Behance](https://www.behance.net/sandeshtriston) · sandeshbishokarma117@gmail.com
