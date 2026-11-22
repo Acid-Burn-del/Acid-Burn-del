@@ -41,18 +41,27 @@ export const skillGroupSchema = z.object({
   items: z.array(z.string().min(1).max(40)).min(1),
 });
 
+const period = z.string().regex(/^\d{4}(-\d{2})?$/, 'Use YYYY or YYYY-MM');
+
 export const experienceSchema = z.object({
   role: z.string().min(1),
   organization: z.string().min(1),
   url: httpsUrl.optional(),
-  start: z.string().regex(/^\d{4}(-\d{2})?$/, 'Use YYYY or YYYY-MM'),
-  end: z
-    .string()
-    .regex(/^(\d{4}(-\d{2})?|present)$/, 'Use YYYY, YYYY-MM or "present"'),
+  location: z.string().max(80).optional(),
+  start: period,
+  end: z.union([period, z.literal('present')]),
   highlights: z.array(z.string().min(1)).min(1),
+});
+
+export const educationSchema = z.object({
+  institution: z.string().min(1),
+  credential: z.string().min(1),
+  start: period,
+  end: z.union([period, z.literal('present')]),
 });
 
 export type SiteConfig = z.infer<typeof siteConfigSchema>;
 export type SocialLink = z.infer<typeof socialLinkSchema>;
 export type SkillGroup = z.infer<typeof skillGroupSchema>;
 export type Experience = z.infer<typeof experienceSchema>;
+export type Education = z.infer<typeof educationSchema>;

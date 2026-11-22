@@ -4,7 +4,7 @@ summary: This website — a statically generated, zero-tracking portfolio with a
 date: 2026-10-12
 tags: [Astro, TypeScript, Security, CI/CD]
 repo: https://github.com/Acid-Burn-del/Acid-Burn-del
-featured: true
+featured: false
 ---
 
 ## Overview

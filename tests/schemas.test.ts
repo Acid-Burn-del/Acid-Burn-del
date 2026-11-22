@@ -42,3 +42,12 @@ describe('experienceSchema', () => {
     expect(experienceSchema.safeParse({ ...base, start: 'Jan 2024', end: 'present' }).success).toBe(false);
   });
 });
+
+describe('educationSchema', () => {
+  it('accepts an ongoing degree and rejects malformed dates', async () => {
+    const { educationSchema } = await import('@/lib/schemas');
+    const base = { institution: 'HAMK', credential: 'BSc' };
+    expect(educationSchema.safeParse({ ...base, start: '2025-08', end: 'present' }).success).toBe(true);
+    expect(educationSchema.safeParse({ ...base, start: 'Aug 2025', end: '2028' }).success).toBe(false);
+  });
+});
